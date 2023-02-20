@@ -29,10 +29,6 @@ class ContactPage extends Component {
     });
   };
 
-  addFilter = data => {
-    this.setState({ filter: data });
-  };
-
   handleRemove = name => {
     this.setState(prevState => {
       const newState = prevState.contacts.filter(item => item.name !== name);
@@ -67,7 +63,7 @@ class ContactPage extends Component {
           <h1 className={styles.title}>Phonebook</h1>
           <ContactForm addContact={this.addContact} />
           <h2 className={styles.title}>Contacts</h2>
-          <Filter filter={this.onFilter} />
+          <Filter filter={this.onFilter} filterValue={this.state.filter} />
           {this.state.contacts.length !== 0 && (
             <ContactList
               filterSearch={this.filterSearch()}
