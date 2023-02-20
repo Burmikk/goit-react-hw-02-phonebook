@@ -1,4 +1,5 @@
 import styles from './filter.module.scss';
+import PropTypes from 'prop-types';
 
 const Filter = ({ filter }) => (
   <div className={styles.filter}>
@@ -11,4 +12,8 @@ const Filter = ({ filter }) => (
     />
   </div>
 );
+
+Filter.proprTypes = {
+  filter: PropTypes.number.isRequired,
+};
 export default Filter;

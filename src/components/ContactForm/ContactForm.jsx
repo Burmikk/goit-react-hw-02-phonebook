@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import styles from './contactForm.module.scss';
 
 const INITIAL_STATE = {
@@ -60,4 +62,8 @@ class ContactForm extends Component {
     );
   }
 }
+ContactForm.propTypes = {
+  addContact: PropTypes.func.isRequired,
+};
+
 export default ContactForm;

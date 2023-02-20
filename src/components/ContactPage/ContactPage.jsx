@@ -46,7 +46,9 @@ class ContactPage extends Component {
     });
   };
 
-  //функция возвращает
+  //Функция ниже возвращает либо contacts либо отфильтрованый массив с контактами.
+  //Дальше она передается в клмпонент ContactList который создает разметку искользуя эти данные
+
   filterSearch = () => {
     const { contacts, filter } = this.state;
     if (!filter) {

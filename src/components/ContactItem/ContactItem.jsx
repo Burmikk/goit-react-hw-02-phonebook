@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import styles from './contactItem.module.scss';
 const ContactItem = ({ name, number, removeItem }) => (
   <li className={styles.item}>
@@ -8,5 +10,11 @@ const ContactItem = ({ name, number, removeItem }) => (
     </button>
   </li>
 );
+
+ContactItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  removeItem: PropTypes.func.isRequired,
+};
 
 export default ContactItem;
